@@ -2,7 +2,7 @@
 Tutorial on how to set up a development toolchain for Python using VSCode, uv, Ruff and an openrouter API endpoint for free Github Copilot usage. Also check the slides in this repository to have more details on the presented tools.
 
 ## VSCode
-1) [Get started by installing VSCode]([getting started with VSCode](http://code.visualstudio.com/docs/getstarted/overview?os=windows)).
+1) Get started by [installing VSCode](http://code.visualstudio.com/docs/getstarted/overview?os=windows).
 
 Usually your would now also install a [Python interpreter for VSCode](https://code.visualstudio.com/docs/python/python-tutorial#_install-a-python-interpreter), but we will install it in a different way later for more consistency.
 
@@ -18,6 +18,7 @@ Usually your would now also install a [Python interpreter for VSCode](https://co
 ### Repository structure
 Repos are just folders, you can organise them in any way you see fit.
 For example, create separate folders for each homework, with the separate exercises as [jupyter notebooks](https://docs.jupyter.org/en/latest/#what-is-a-notebook).
+Notebooks are great because you can export them to html or even pdf.
 
 2) Use the terminal in VSCode and [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the repository into the folder you are in.
 For ease of use I recommend later setting up [SSH for GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
@@ -70,10 +71,20 @@ This sets the minimum supported version for this project, `.python-version` pins
     uv add numpy matplotlib nbconvert
 ```
 These are all the libraries you will need for the course. If you do other projects, add the necessary dependencies the same way or remove unused ones with `uv remove`.
+There will now be a new `uv.lock` file, pinning the specific dependencies currently used in this project.
 
 Now we are able to write and execute code using the installed libraries.
+We can run `.py` scripts using `uv run script_name.py` or select the python kernel virtual environment in our jupyter notebook.
 
-5) Push the now created `uv.lock` in order to pin the specific library dependencies for this project.
+The virtual environment will create a `.venv` folder, which is unnecessary to keep track of with Git.
+
+5) Create a `.gitignore` file with the content
+```
+.venv
+```
+You  can also add any other files or even folders that you might not want to track.
+
+7) Push `.gitignore` and `uv.lock` to your repository.
 
 If you or anyone else now clones this repository on a different device, all they have to do is install the version of uv specified in `README.md`, execute `uv sync` in the terminal and they will automatically install the correct dependencies.
 
@@ -90,7 +101,7 @@ To avoid inconsistencies and making any mistakes, it is incredibly useful to use
 The one we will use is [Ruff](https://docs.astral.sh/ruff/) by the creators of uv.
 Ruff can also act as a [linter](https://www.jetbrains.com/pages/static-code-analysis-guide/linters/), checking your code for inefficiencies or certain implementation guidelines that make code cleaner, without needing to execute the code at all.
 
-1) Install the [Ruff VSCode extension](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
+1) Install the [Ruff VSCode extension](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff) and [Python environments](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-python-envs) extension.
 
 2) Add ruff as a development dependency with `uv add --dev ruff`
 
@@ -105,6 +116,11 @@ Ruff can also act as a [linter](https://www.jetbrains.com/pages/static-code-anal
 ```
 This will now follow the popular [black](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html) formatting style, which is PEP8 compliant, and add a list of linting rules that improve your code.
 There is a [very long list](https://docs.astral.sh/ruff/rules/) of supported lint rules in Ruff, go through them if you ever have too much free time. (I personally also use "ANN", and "PD")
+
+4) In VSCode settings, enable **Editor: Format On Save**.
+
+You can now instantly format code in an open file with the shortcut `Ctrl+S`.
+It might also be nice to add a ruler (80 characters) under the setting **Editor: Rulers**, adding a vertical reference line to the code window.
 
 ## Integrating openrouter API into GitHub Copilot
 In order to not get stuck with the usage limit of the Copilot free plan, we can integrate other providers with the VSCode [BringYourOwnKey](https://code.visualstudio.com/blogs/2026/06/18/byok-vscode) feature.
@@ -126,6 +142,12 @@ In general , coding with LLMs nowadays also heavily involves [agentic coding](ht
 
 With this, you now have a python development toolchain that greatly improves code quality and reproducibility, especially when collaborating with others.
 You might want to create a [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) to easily set up new projects in the same way.
+
+It is important to be transparent about the use of AI in your work.
+VSCode can automatically add Copilot as co-author to the git commit message if you [enable the setting](https://code.visualstudio.com/docs/sourcecontrol/staging-commits?referrer=vsc-search#_ai-co-author-attribution).
+Depending on the setting, this will trigger if you use any or just some of the AI chat and auto-complete features.
+I think **you should enable it**.
+You can also copy your conversations and paste them into a `.md` file, which you can then convert to pdf and attach to a report for example.
 
 If you do use this toolchain, it is important that your project explains how to install the necessary tools in the repository `README.md`.
 Update your template repository every once in a while to keep your libraries and tools up to date.
