@@ -143,6 +143,8 @@ In general , coding with LLMs nowadays also heavily involves [agentic coding](ht
 With this, you now have a python development toolchain that greatly improves code quality and reproducibility, especially when collaborating with others.
 You might want to create a [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) to easily set up new projects in the same way.
 
+You should also register for [GitHub Education](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students), which will give you free GitHub Pro. This needs to be done while physically present at university, since they check your location during sign up for verification.
+
 It is important to be transparent about the use of AI in your work.
 VSCode can automatically add Copilot as co-author to the git commit message if you [enable the setting](https://code.visualstudio.com/docs/sourcecontrol/staging-commits?referrer=vsc-search#_ai-co-author-attribution).
 Depending on the setting, this will trigger if you use any or just some of the AI chat and auto-complete features.
