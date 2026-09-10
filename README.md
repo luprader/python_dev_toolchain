@@ -45,9 +45,9 @@ uv --version
 ```
 and write the version down in your `README.md` file.
 
-4) Install the latest Python version and pin its version to a `.python-version` file:
+4) Install the latest stable Python version and pin its version to a `.python-version` file:
 ```bash
-    uv python install
+    uv python install 3.14
     uv python pin
 ```
 
@@ -61,10 +61,10 @@ and write the version down in your `README.md` file.
     version = "0.1.0"
     description = "Add your description here"
     readme = "README.md"
-    requires-python = ">=3.XX"
+    requires-python = ">=3.14"
 ```
-Change the  project name, author information and replace the required  minor Python version with the one stated in your `.python-version` (`MAJOR.MINOR.PATCH`). Do **NOT** specify it with the patch version , only specify up to the minor version number.
-This sets the minimum supported version for this project, `.python-version` pins the specific patch that you are using.
+Change the  project name, author information.
+This sets the minimum supported version for this project to 3.14, `.python-version` pins the specific patch that you are using.
 
 4) In order to have libraries available to us, we need to add them to uv:
 ```bash
