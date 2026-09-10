@@ -23,7 +23,7 @@ Notebooks are great because you can export them to html or even pdf.
 2) Use the terminal in VSCode and [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the repository into the folder you are in.
 For ease of use I recommend later setting up [SSH for GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
-3) Move into the repository (right click -> "Open Containing Folder"), create a folder called `homework_1` and add a file `hello_world.ipynb`.
+3) Move into the repository (File -> Open Folder -> navigate to repository folder), create a folder called `homework_1` and add a file `hello_world.ipynb`.
 
 5) Commit and push the changes to GitHub using the Git window in the toolbar.
 
