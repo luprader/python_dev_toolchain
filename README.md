@@ -76,9 +76,13 @@ There will now be a new `uv.lock` file, pinning the specific dependencies curren
 Now we are able to write and execute code using the installed libraries.
 We can run `.py` scripts using `uv run script_name.py` or select the python kernel virtual environment in our jupyter notebook.
 
-The virtual environment will create a `.venv` folder, which is unnecessary to keep track of with Git.
+5) Run
+```
+uv sync
+```
+To initialise the virtual environment. This will create a `.venv` folder, which is unnecessary to keep track of with Git.
 
-5) Create a `.gitignore` file with the content
+7) Create a `.gitignore` file with the content
 ```
 .venv
 ```
