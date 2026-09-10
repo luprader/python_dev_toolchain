@@ -9,8 +9,9 @@ Usually your would now also install a [Python interpreter for VSCode](https://co
 2) Open VSCode and open a folder in which you want to create the project on your computer.
 
 3) Set up [Git for VSCode](https://code.visualstudio.com/docs/sourcecontrol/github). (only up to the pull request section)
+For the config email, you can also use the [GitHub no-reply email](https://docs.github.com/en/account-and-profile/reference/email-addresses-reference#your-noreply-email-address) provided with your account (found at the bottom of your email settings), since this info will always be added to commits.
 
-4) Install the [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) and [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extensions in VSCode.
+5) Install the [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) and [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extensions in VSCode.
 
 ## GitHub repository
 1) Follow the [quickstart guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories) to create a private course repository.
