@@ -46,6 +46,13 @@ uv --version
 ```
 and write the version down in your `README.md` file.
 
+### For people on Windows:
+Installing uv also requires you to add the tools to your systems PATH, otherwise you can not use uv to run the commands like `uv python isntall`.
+Try opening a new VSCode terminal after installation and see if it fixes the error, otherwise run the command:
+```powershell
+    $env:Path = "$env:USERPROFILE\.local\bin;$env:Path"
+```
+
 4) Install the latest stable Python version and pin its version to a `.python-version` file:
 ```bash
     uv python install 3.14
