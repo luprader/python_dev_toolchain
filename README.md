@@ -56,7 +56,7 @@ Try opening a new VSCode terminal after installation and see if it fixes the err
 4) Install the latest stable Python version and pin its version to a `.python-version` file:
 ```bash
     uv python install 3.14
-    uv python pin
+    uv python pin 3.14
 ```
 
 3) Create a pyproject.toml file in the root of the repository and add the following lines:
