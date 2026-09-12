@@ -15,7 +15,10 @@ For the config email, you can also use the [GitHub no-reply email](https://docs.
 
 ## GitHub repository
 1) Follow the [quickstart guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories) to create a private course repository.
-Be aware that if you ever create a public repository, it will be available to the whole internet just like this one. Be wary of saving copyrighted material to your repositories!!!
+
+> [!CAUTION]
+> Be aware that if you ever create a public repository, it will be available to the whole internet just like this one. Be wary of saving copyrighted material to your repositories!!!
+> Use `.gitignore` as explained further below to be able to have files in the folder locally that do not get tracked by git.
 
 ### Repository structure
 Repos are just folders, you can organise them in any way you see fit.
@@ -100,6 +103,9 @@ You  can also add any other files or even folders that you might not want to tra
 7) Push `.gitignore` and `uv.lock` to your repository.
 
 If you or anyone else now clones this repository on a different device, all they have to do is install the version of uv specified in `README.md`, execute `uv sync` in the terminal and they will automatically install the correct dependencies.
+
+> [!NOTE]
+> The installed libraries and the virtual environment are only available in this folder! If you want to use uv in another project, you again need to create the `pyproject.toml` and `.python-version` files and also create a `README.md` file with information about that specific project.
 
 ## Code formatting and linting with Ruff
 When writing code, we want to follow the [PEP8](https://peps.python.org/pep-0008/) formatting guidelines for Python to make our code more readable, which is useful both for ourselves but also collaborators or even LLMs to more easily understand what the code does.
