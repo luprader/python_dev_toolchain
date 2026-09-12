@@ -146,7 +146,7 @@ In order to not get stuck with the usage limit of the Copilot free plan, we can 
 
 Here I will show you how to integrate a free [openrouter](https://openrouter.ai/) API key, giving you access to their range of free LLMs. ([always changing](https://openrouter.ai/collections/free-models))
 
-1) Got to [openrouter] and create an account.
+1) Got to [openrouter](https://openrouter.ai/) and create an account.
 
 2) Under API keys, create a key and set the credit limit to $0.
 
