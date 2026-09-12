@@ -15,6 +15,7 @@ For the config email, you can also use the [GitHub no-reply email](https://docs.
 
 ## GitHub repository
 1) Follow the [quickstart guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories) to create a private course repository.
+Be aware that if you ever create a public repository, it will be available to the whole internet just like this one. Be wary of saving copyrighted material to your repositories!!!
 
 ### Repository structure
 Repos are just folders, you can organise them in any way you see fit.
