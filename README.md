@@ -81,13 +81,13 @@ This sets the minimum supported version for this project to 3.14, `.python-versi
 
 4) In order to have libraries available to us, we need to add them to uv:
 ```bash
-    uv add numpy matplotlib nbconvert
+    uv add numpy matplotlib ipykernel nbconvert
 ```
 These are all the libraries you will need for the course. If you do other projects, add the necessary dependencies the same way or remove unused ones with `uv remove`.
 There will now be a new `uv.lock` file, pinning the specific dependencies currently used in this project.
 
 Now we are able to write and execute code using the installed libraries.
-We can run `.py` scripts using `uv run script_name.py` or select the python kernel virtual environment in our jupyter notebook.
+We can run `.py` scripts using `uv run script_name.py` or select the python kernel virtual environment in our jupyter notebook (under "Python Environments, should be marked with a star).
 
 5) Run
 ```
